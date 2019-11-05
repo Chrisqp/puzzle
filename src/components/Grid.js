@@ -45,9 +45,10 @@ export default styled(Grid)`
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   min-height: 500px;
+  margin-left: 120px;
   
   & .tiles {
     width: ${props => props.tileSize * props.gridSize}px;

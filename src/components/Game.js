@@ -121,7 +121,7 @@ class Game extends Component {
       () => {
         this.addTimer();
       },
-      100,
+      1000,
     );
   }
 
@@ -218,7 +218,7 @@ class Game extends Component {
         gameState={this.state.gameState}
       />
         }
-        <Grid 
+        <Grid
           gridSize={gridSize}
           tileSize={tileSize}
           tiles={this.state.tiles}

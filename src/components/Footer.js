@@ -22,23 +22,23 @@ const FooterContent = styled.div`
 const Footer = () => (
   <FooterContent>
     <a
-      href="https://github.com/react-puzzle-games/15-puzzle/"
+      href="https://github.com/cesarema7/juego-puzzle"
       target="_blank"
       rel="noopener noreferrer"
     >
       <GitHubIcon className="menuIcon" />
     </a>
     <p>
-      Made with{' '}
+      Alojado en {' '}
       <span className="footerheart">♥</span>
       {' '}by{' '}
       <a
         className="footerlink"
-        href="https://github.com/react-puzzle-games"
+        href="https://github.com/cesarema7/juego-puzzle"
         rel="noopener noreferrer"
         target="_blank"
       >
-        {' '}React Puzzle Games
+        {' '}Repositorio cesarema7
       </a>
     </p>
   </FooterContent>

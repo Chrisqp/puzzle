@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inidex</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+  
+    var socket = io.connect('http://localhost');
+    socket.on("userList",function(data){
+        Object.keys(data).forEach(function(userName, value) {
+            var list= document.getElementById("userList");
+            list.append("<li>"+userName+"</li>");
+        });
+    });
+
+    function disconnectUser(){
+        var user= document.getElementById("user").value;
+        socket.emit('disconnectUser', {user: user});
+    }
+    function connectUser(){
+        var user= document.getElementById("user").value;
+        socket.emit('sendUser', {user: user});    
+    }
+    </script>
+</head>
+<body>
+    <h1>SOCKET.IO example</h1>
+    <input id="user" value="Usuario"></input>
+    <button id="userLogin" onclick="connectUser()">Registro</button>
+    <button id="userLogin" onclick="disconnectUser()">Disconnet</button>
+    <ul id="messages"></ul>
+    <form action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+</body>
+</html>
